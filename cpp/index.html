@@ -17,8 +17,7 @@
   <script>
     loadWebAssembly('math.wasm')
       .then(instance => {
-        const square = instance.exports._square           //声明wasm中的函数square
-
+        const square = instance.exports._square           //拿到wasm代码输出的接口——————square
         console.log('2^2 =', square(2))
         console.log('3^2 =', square(3))
         console.log('(2 + 5)^2 =', square(2 + 5))
